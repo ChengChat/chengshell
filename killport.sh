@@ -24,6 +24,7 @@ function kill_pid_assign() {
     echo "Please choose a line: "
 
     read -r no
+    # $0代表整行
     line=$(echo "${socket_ls}" | awk '{if($1=='"${no}"') print $0 }')
     echo "$line"
     pid=$(echo "$line" | awk '{print $3}')
