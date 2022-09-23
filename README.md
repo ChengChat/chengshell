@@ -1,1 +1,4 @@
 # chengshell
+
+- awk
+- read
