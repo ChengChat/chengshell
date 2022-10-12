@@ -34,6 +34,7 @@ function kill_pid_assign() {
 port=$1
 if [[ -z $port ]]; then
   echo "Requires a port parameter, E.g: killport.sh 8080"
+  exit 1
 fi
 
 socket_ls=$(lsof -i:"${port}" | awk '{printf("%-5d%s\n", NR-1, $0)}')
